@@ -14,6 +14,7 @@
 		303CB36D276A75B400715AD3 /* MovieChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303CB36C276A75B400715AD3 /* MovieChallengeTests.swift */; };
 		303CB377276A75B400715AD3 /* MovieChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303CB376276A75B400715AD3 /* MovieChallengeUITests.swift */; };
 		303CB379276A75B400715AD3 /* MovieChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303CB378276A75B400715AD3 /* MovieChallengeUITestsLaunchTests.swift */; };
+		303CB386276A766100715AD3 /* Instructions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 303CB385276A766100715AD3 /* Instructions.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		303CB372276A75B400715AD3 /* MovieChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		303CB376276A75B400715AD3 /* MovieChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieChallengeUITests.swift; sourceTree = "<group>"; };
 		303CB378276A75B400715AD3 /* MovieChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		303CB385276A766100715AD3 /* Instructions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Instructions.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		303CB34F276A75B300715AD3 = {
 			isa = PBXGroup;
 			children = (
+				303CB385276A766100715AD3 /* Instructions.pdf */,
 				303CB35A276A75B300715AD3 /* MovieChallenge */,
 				303CB36B276A75B400715AD3 /* MovieChallengeTests */,
 				303CB375276A75B400715AD3 /* MovieChallengeUITests */,
@@ -231,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				303CB386276A766100715AD3 /* Instructions.pdf in Resources */,
 				303CB363276A75B400715AD3 /* Preview Assets.xcassets in Resources */,
 				303CB360276A75B400715AD3 /* Assets.xcassets in Resources */,
 			);
