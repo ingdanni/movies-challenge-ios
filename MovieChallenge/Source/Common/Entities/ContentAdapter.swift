@@ -6,7 +6,8 @@
 //
 
 protocol ContentAdapter {
-    var id: Int { get }
+    var contentId: Int { get }
     var contentTitle: String { get }
+    var contentOverview: String { get }
     var contentImage: String { get }
 }

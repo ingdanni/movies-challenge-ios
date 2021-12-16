@@ -1,41 +1,50 @@
 //
-//  Serie.swift
+//  Movie.swift
 //  MovieChallenge
 //
 //  Created by Danny Narvaez on 15/12/21.
 //
 
-struct Serie: Codable {
-    let backdropPath, firstAirDate: String?
+struct Movie: Codable {
+    let adult: Bool
+    let backdropPath: String?
     let genreIDS: [Int]
     let id: Int
-    let name: String
-    let originCountry: [String]
-    let originalLanguage: String
-    let originalName, overview: String
+    let originalLanguage, originalTitle, overview: String
     let popularity: Double
-    let posterPath: String
+    let posterPath, releaseDate, title: String
+    let video: Bool
     let voteAverage: Double
     let voteCount: Int
 
     enum CodingKeys: String, CodingKey {
+        case adult
         case backdropPath = "backdrop_path"
-        case firstAirDate = "first_air_date"
         case genreIDS = "genre_ids"
-        case id, name
-        case originCountry = "origin_country"
+        case id
         case originalLanguage = "original_language"
-        case originalName = "original_name"
+        case originalTitle = "original_title"
         case overview, popularity
         case posterPath = "poster_path"
+        case releaseDate = "release_date"
+        case title, video
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
     }
 }
 
-extension Serie: ContentAdapter {
+extension Movie: ContentAdapter {
+    
+    var contentId: Int {
+        id
+    }
+    
     var contentTitle: String {
-        name
+        title
+    }
+    
+    var contentOverview: String {
+        overview
     }
     
     var contentImage: String {

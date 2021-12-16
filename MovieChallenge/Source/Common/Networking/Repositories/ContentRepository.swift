@@ -13,10 +13,14 @@ protocol ContentProvider {
 
 class ContentRepository: HTTPClient, ContentProvider {
     func fetchMovies(page: Int, category: Category, completion: @escaping (Result<ContentResponse<Movie>, HTTPClientError>) -> Void) {
-        request(resource: ContentResource.getPage(.movie, category, page), type: ContentResponse<Movie>.self, completion: completion)
+        request(resource: ContentResource.getPage(.movies, category, page),
+                type: ContentResponse<Movie>.self,
+                completion: completion)
     }
     
     func fetchSeries(page: Int, category: Category, completion: @escaping (Result<ContentResponse<Serie>, HTTPClientError>) -> Void) {
-        request(resource: ContentResource.getPage(.serie, category, page), type: ContentResponse<Serie>.self, completion: completion)
+        request(resource: ContentResource.getPage(.series, category, page),
+                type: ContentResponse<Serie>.self,
+                completion: completion)
     }
 }

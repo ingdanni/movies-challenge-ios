@@ -24,12 +24,15 @@ struct ContentView: View {
                             })
                         }
                     }
-                    .padding(.horizontal, 8)
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 8)
                 })
                 
                 List {
-                    ForEach(presenter.list, id: \.id) { item in
-                        Text(item.contentTitle)
+                    ForEach(presenter.list, id: \.contentId) { item in
+                        self.presenter.detailLinkBuilder(for: item) {
+                            Text(item.contentTitle)
+                        }
                     }
                 }
             }

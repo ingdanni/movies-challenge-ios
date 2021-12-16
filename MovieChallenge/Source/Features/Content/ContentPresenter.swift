@@ -32,4 +32,13 @@ class ContentPresenter: ObservableObject {
             })
             .store(in: &cancellables)
     }
+    
+    func detailLinkBuilder<Content: View>(
+        for item: ContentAdapter,
+        @ViewBuilder content: () -> Content) -> some View {
+        
+        NavigationLink(destination: router.makeDetailView(for: item)) {
+            content()
+        }
+    }
 }

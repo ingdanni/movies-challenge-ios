@@ -6,17 +6,17 @@
 //
 
 enum ResourceType: String, CaseIterable {
-    case movie
-    case serie = "tv"
+    case movies = "movie"
+    case series = "tv"
 }
 
 extension ResourceType {
     
     var title: String {
         switch self {
-        case .movie:
+        case .movies:
             return "Movies"
-        case .serie:
+        case .series:
             return "Series"
         }
     }

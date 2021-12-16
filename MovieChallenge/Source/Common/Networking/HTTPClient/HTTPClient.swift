@@ -105,7 +105,7 @@ open class HTTPClient {
         
         let requestURL = URL(string: url)
         
-        var request = URLRequest(url: requestURL!)
+        var request = URLRequest(url: requestURL!, cachePolicy: .reloadIgnoringLocalCacheData)
         request.httpMethod = resource.resource.method.rawValue
         request.setValue(resource.resource.contentType?.rawValue, forHTTPHeaderField: "Content-Type")
         
