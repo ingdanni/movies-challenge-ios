@@ -28,13 +28,14 @@ struct ContentView: View {
                     .padding(.vertical, 8)
                 })
                 
-                List {
+                ScrollView {
                     ForEach(presenter.list, id: \.contentId) { item in
                         self.presenter.detailLinkBuilder(for: item) {
-                            Text(item.contentTitle)
+                            ContentListItem(title: item.contentTitle, url: item.contentImage)
                         }
                     }
                 }
+                .listStyle(PlainListStyle())
             }
             .navigationTitle(title)
         }

@@ -48,6 +48,6 @@ extension Serie: ContentAdapter {
     }
     
     var contentImage: String {
-        posterPath
+        kImageUrl + posterPath
     }
 }

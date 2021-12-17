@@ -48,6 +48,6 @@ extension Movie: ContentAdapter {
     }
     
     var contentImage: String {
-        posterPath
+        kImageUrl + posterPath
     }
 }
