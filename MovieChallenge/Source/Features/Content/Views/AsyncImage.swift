@@ -13,13 +13,14 @@ struct AsyncImage<Placeholder: View>: View {
     private let placeholder: Placeholder
     private let image: (UIImage) -> Image
     
-    init(url: URL,
+    init(url: String,
          @ViewBuilder placeholder: () -> Placeholder,
          @ViewBuilder image: @escaping (UIImage) -> Image = Image.init(uiImage:)) {
         
         self.placeholder = placeholder()
         self.image = image
-        _loader = StateObject(wrappedValue: ImageLoader(url: url))
+        
+        _loader = StateObject(wrappedValue: ImageLoader(url: URL(string: url)!))
     }
     
     var body: some View {

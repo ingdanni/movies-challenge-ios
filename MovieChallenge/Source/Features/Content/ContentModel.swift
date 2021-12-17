@@ -23,11 +23,14 @@ final class ContentModel {
         client = ContentRepository(configuration: configuration)
     }
     
-    func load(category: Category) {
-        list = []
+    func load(category: Category, for page: Int, reset: Bool = false) {
+        
+        if reset {
+            list = []
+        }
         
         if resourcesType == .movies {
-            client.fetchMovies(page: 1, category: category, completion: { [weak self] result in
+            client.fetchMovies(page: page, category: category, completion: { [weak self] result in
                 switch result {
                 case .success(let response):
                     // save movies on cache
@@ -36,7 +39,7 @@ final class ContentModel {
                                                on: category)
                     
                     DispatchQueue.main.async {
-                        self?.list = response.results
+                        self?.list += response.results
                     }
                     
                 case .failure(let error):
@@ -47,7 +50,7 @@ final class ContentModel {
             })
             
         } else {
-            client.fetchSeries(page: 1, category: category, completion: { [weak self] result in
+            client.fetchSeries(page: page, category: category, completion: { [weak self] result in
                 switch result {
                 case .success(let response):
                     // save series on cache
@@ -56,7 +59,7 @@ final class ContentModel {
                                                on: category)
                     
                     DispatchQueue.main.async {
-                        self?.list = response.results
+                        self?.list += response.results
                     }
                     
                 case .failure(let error):

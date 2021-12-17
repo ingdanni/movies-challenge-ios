@@ -19,7 +19,7 @@ struct MainNavigation: View {
                     )
                 )
                 .tabItem {
-                    Image(systemName: "video.circle.fill") // FIXME: Handle icon
+                    Image(systemName: item.icon)
                     Text(item.title)
                 }
             }

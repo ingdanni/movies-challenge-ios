@@ -14,10 +14,12 @@ struct ContentDetailView: View {
         ScrollView {
             VStack {
                 AsyncImage(
-                    url: URL(string: presenter.content.contentImage)!,
+                    url: presenter.content.contentImage,
                     placeholder: {
-                        Text("Loading...")
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        Image(systemName: "play.square")
+                            .font(.system(size: 200))
+                            .frame(maxWidth: .infinity, idealHeight: 250)
+                            .foregroundColor(Color.gray)
                     }, image: {
                         Image(uiImage: $0)
                             .resizable()
