@@ -71,6 +71,37 @@ final class ContentModel {
         }
     }
     
+    func search(_ text: String) {
+        if resourcesType == .movies {
+            client.searchMovies(query: text) { [weak self] result in
+                switch result {
+                case .success(let response):
+                    DispatchQueue.main.async {
+                        self?.list = response.results
+                    }
+                case .failure(let error):
+                    print(error)
+                    self?.searchOnCache(text)
+                }
+            }
+            
+        } else {
+            client.searchSeries(query: text) { [weak self] result in
+                switch result {
+                case .success(let response):
+                    DispatchQueue.main.async {
+                        self?.list = response.results
+                    }
+                case .failure(let error):
+                    print(error)
+                    self?.searchOnCache(text)
+                }
+            }
+        }
+    }
+    
+    // MARK: Private methods
+    
     private func loadFromCache(category: Category) {
         DispatchQueue.main.async {
             let cacheResult = Cache.shared.getCollection(of: category, with: self.resourcesType)
@@ -78,11 +109,9 @@ final class ContentModel {
         }
     }
     
-    func search(_ text: String, category: Category) {
-        print("search \(text), category \(category.rawValue)")
-        
+    private func searchOnCache(_ text: String) {
         DispatchQueue.main.async {
-            let cacheResult = Cache.shared.search(text, of: category, with: self.resourcesType)
+            let cacheResult = Cache.shared.search(text, with: self.resourcesType)
             self.list = cacheResult
         }
     }

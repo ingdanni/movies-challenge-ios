@@ -24,6 +24,7 @@ struct ContentView: View {
                 contentList
             }
             .navigationTitle(title)
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
     

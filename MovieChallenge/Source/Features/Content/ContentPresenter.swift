@@ -57,11 +57,11 @@ class ContentPresenter: ObservableObject {
     func search(_ text: String) {
         if text.isEmpty {
             currentPage = 1
-            
             interactor.load(category: selectedCategory, for: currentPage, reset: true)
-            
-        } else {
-            interactor.search(text, category: selectedCategory)
+        }
+        
+        if text.count > 3 {
+            interactor.search(text)
         }
     }
 }

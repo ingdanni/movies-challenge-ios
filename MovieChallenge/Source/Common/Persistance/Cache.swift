@@ -54,8 +54,8 @@ class Cache {
         return Array(result)
     }
     
-    func search(_ text: String, of category: Category, with type: ResourceType) -> [ContentAdapter] {
-        let filter = "category = '\(category.rawValue)' AND resourceType = '\(type.rawValue)' AND title CONTAINS '\(text)'"
+    func search(_ text: String, with type: ResourceType) -> [ContentAdapter] {
+        let filter = "resourceType = '\(type.rawValue)' AND title CONTAINS '\(text)'"
         let result = realm.objects(ContentEntity.self).filter(filter)
         
         return Array(result)

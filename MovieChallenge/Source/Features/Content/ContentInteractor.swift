@@ -18,7 +18,7 @@ class ContentInteractor {
         model.load(category: category, for: page, reset: reset)
     }
     
-    func search(_ text: String, category: Category) {
-        model.search(text, category: category)
+    func search(_ text: String) {
+        model.search(text)
     }
 }
