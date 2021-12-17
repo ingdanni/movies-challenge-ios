@@ -14,7 +14,7 @@ struct Serie: Codable {
     let originalLanguage: String
     let originalName, overview: String
     let popularity: Double
-    let posterPath: String
+    let posterPath: String?
     let voteAverage: Double
     let voteCount: Int
 
@@ -48,6 +48,10 @@ extension Serie: ContentAdapter {
     }
     
     var contentImage: String {
-        kImageUrl + posterPath
+        if let postPath = posterPath {
+            return kImageUrl + postPath
+        }
+        
+        return ""
     }
 }

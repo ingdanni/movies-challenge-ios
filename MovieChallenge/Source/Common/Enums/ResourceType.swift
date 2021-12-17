@@ -20,4 +20,13 @@ extension ResourceType {
             return "Series"
         }
     }
+    
+    var icon: String {
+        switch self {
+        case .movies:
+            return "hexagon"
+        case .series:
+            return "diamond"
+        }
+    }
 }

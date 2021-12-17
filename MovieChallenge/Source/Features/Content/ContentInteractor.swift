@@ -14,7 +14,7 @@ class ContentInteractor {
         self.model = model
     }
     
-    func load(category: Category) {
-        model.load(category: category)
+    func load(category: Category, for page: Int, reset: Bool = false) {
+        model.load(category: category, for: page, reset: reset)
     }
 }

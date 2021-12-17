@@ -16,28 +16,55 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                ScrollView(.horizontal, showsIndicators: false, content: {
-                    HStack {
-                        ForEach(Category.allCases, id: \.rawValue) { item in
-                            Button(item.title, action: {
-                                presenter.selectedCategory = item
-                            })
-                        }
-                    }
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 8)
-                })
-                
-                ScrollView {
-                    ForEach(presenter.list, id: \.contentId) { item in
-                        self.presenter.detailLinkBuilder(for: item) {
-                            ContentListItem(title: item.contentTitle, url: item.contentImage)
-                        }
-                    }
-                }
-                .listStyle(PlainListStyle())
+                categoriesHeader
+                contentList
             }
             .navigationTitle(title)
         }
+    }
+    
+    // MARK: Header
+    
+    var categoriesHeader: some View {
+        ScrollView(.horizontal, showsIndicators: false, content: {
+            HStack {
+                ForEach(Category.allCases, id: \.rawValue) { item in
+                    Button(item.title, action: {
+                        presenter.selectedCategory = item
+                    })
+                }
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 8)
+        })
+    }
+    
+    // MARK: List
+    
+    var contentList: some View {
+        ScrollView {
+            LazyVStack {
+                listItems
+            }
+        }
+    }
+    
+    var listItems: some View {
+        Group {
+            ForEach(presenter.list, id: \.contentId) { item in
+                self.presenter.detailLinkBuilder(for: item) {
+                    ContentListItem(title: item.contentTitle, url: item.contentImage)
+                        .onAppear {
+                            if item.contentId == presenter.list.last?.contentId {
+                                loadMoreItems()
+                            }
+                        }
+                }
+            }
+        }
+    }
+    
+    func loadMoreItems() {
+        presenter.loadMore()
     }
 }

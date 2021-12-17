@@ -18,6 +18,8 @@ class ContentPresenter: ObservableObject {
     
     @Published var selectedCategory: Category = .popular
     
+    private var currentPage: Int = 1
+    
     init(interactor: ContentInteractor) {
         self.interactor = interactor
         
@@ -28,7 +30,9 @@ class ContentPresenter: ObservableObject {
         $selectedCategory
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: { category in
-                interactor.load(category: category)
+                self.currentPage = 1
+                
+                interactor.load(category: category, for: self.currentPage, reset: true)
             })
             .store(in: &cancellables)
     }
@@ -40,5 +44,13 @@ class ContentPresenter: ObservableObject {
         NavigationLink(destination: router.makeDetailView(for: item)) {
             content()
         }
+    }
+    
+    func loadMore() {
+        guard currentPage < 500 else { return }
+        
+        currentPage += 1
+        
+        interactor.load(category: selectedCategory, for: currentPage)
     }
 }
