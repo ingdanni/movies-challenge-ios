@@ -43,7 +43,7 @@ final class ContentModel {
                     }
                     
                 case .failure(let error):
-                    self?.loadFromCache(category: category, with: self?.resourcesType ?? .movies)
+                    self?.loadFromCache(category: category)
                     
                     print(error)
                 }
@@ -63,7 +63,7 @@ final class ContentModel {
                     }
                     
                 case .failure(let error):
-                    self?.loadFromCache(category: category, with: self?.resourcesType ?? .series)
+                    self?.loadFromCache(category: category)
                     
                     print(error)
                 }
@@ -71,9 +71,18 @@ final class ContentModel {
         }
     }
     
-    private func loadFromCache(category: Category, with resourceType: ResourceType) {
+    private func loadFromCache(category: Category) {
         DispatchQueue.main.async {
-            let cacheResult = Cache.shared.getCollection(of: category, with: resourceType)
+            let cacheResult = Cache.shared.getCollection(of: category, with: self.resourcesType)
+            self.list = cacheResult
+        }
+    }
+    
+    func search(_ text: String, category: Category) {
+        print("search \(text), category \(category.rawValue)")
+        
+        DispatchQueue.main.async {
+            let cacheResult = Cache.shared.search(text, of: category, with: self.resourcesType)
             self.list = cacheResult
         }
     }

@@ -53,4 +53,15 @@ class ContentPresenter: ObservableObject {
         
         interactor.load(category: selectedCategory, for: currentPage)
     }
+    
+    func search(_ text: String) {
+        if text.isEmpty {
+            currentPage = 1
+            
+            interactor.load(category: selectedCategory, for: currentPage, reset: true)
+            
+        } else {
+            interactor.search(text, category: selectedCategory)
+        }
+    }
 }

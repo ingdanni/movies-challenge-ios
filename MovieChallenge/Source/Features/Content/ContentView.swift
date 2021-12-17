@@ -13,9 +13,13 @@ struct ContentView: View {
     
     @ObservedObject var presenter: ContentPresenter
     
+    @State var searchText: String = ""
+    @State var isSearching: Bool = false
+    
     var body: some View {
         NavigationView {
             VStack {
+                searchBar
                 categoriesHeader
                 contentList
             }
@@ -55,7 +59,7 @@ struct ContentView: View {
                 self.presenter.detailLinkBuilder(for: item) {
                     ContentListItem(title: item.contentTitle, url: item.contentImage)
                         .onAppear {
-                            if item.contentId == presenter.list.last?.contentId {
+                            if !isSearching, item.contentId == presenter.list.last?.contentId {
                                 loadMoreItems()
                             }
                         }
@@ -63,6 +67,38 @@ struct ContentView: View {
             }
         }
     }
+    
+    // MARK: Search
+    
+    var searchBar: some View {
+        HStack {
+            TextField("Search", text: $searchText)
+                .padding(8)
+                .padding(.horizontal, 8)
+                .cornerRadius(8)
+                .padding(.horizontal, 8)
+                .onTapGesture {
+                    isSearching = true
+                }
+                .onChange(of: searchText) { value in
+                    presenter.search(value)
+                }
+            
+            if isSearching {
+                Button(action: {
+                    isSearching = false
+                    searchText = ""
+                }) {
+                    Text("Cancel")
+                }
+                .padding(.trailing, 8)
+                .transition(.move(edge: .trailing))
+                .animation(.default)
+            }
+        }
+    }
+    
+    // MARK: Methods
     
     func loadMoreItems() {
         presenter.loadMore()
