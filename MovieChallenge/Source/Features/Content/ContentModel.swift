@@ -72,8 +72,10 @@ final class ContentModel {
     }
     
     func search(_ text: String) {
+        let query = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+        
         if resourcesType == .movies {
-            client.searchMovies(query: text) { [weak self] result in
+            client.searchMovies(query: query) { [weak self] result in
                 switch result {
                 case .success(let response):
                     DispatchQueue.main.async {
@@ -86,7 +88,7 @@ final class ContentModel {
             }
             
         } else {
-            client.searchSeries(query: text) { [weak self] result in
+            client.searchSeries(query: query) { [weak self] result in
                 switch result {
                 case .success(let response):
                     DispatchQueue.main.async {
