@@ -14,18 +14,20 @@ struct ContentListItem: View {
     var body: some View {
         Group {
             ZStack {
-                AsyncImage(
-                    url: url,
-                    placeholder: {
-                        Image(systemName: "play.square")
-                            .font(.system(size: 200))
-                            .frame(maxWidth: .infinity, idealHeight: 250)
-                            .foregroundColor(Color.gray)
-                    }, image: {
-                        Image(uiImage: $0)
-                            .resizable()
-                    })
-                    .frame(idealWidth: UIScreen.main.bounds.width / 2 * 3)
+                if !url.isEmpty {
+                    AsyncImage(
+                        url: url,
+                        placeholder: {
+                            Image(systemName: "play.square")
+                                .font(.system(size: 200))
+                                .frame(maxWidth: .infinity, idealHeight: 250)
+                                .foregroundColor(Color.gray)
+                        }, image: {
+                            Image(uiImage: $0)
+                                .resizable()
+                        })
+                        .frame(idealWidth: UIScreen.main.bounds.width / 2 * 3)
+                }
                 
                 Text(title)
                     .multilineTextAlignment(.leading)

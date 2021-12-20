@@ -43,7 +43,7 @@ final class ContentModel {
                     }
                     
                 case .failure(let error):
-                    self?.loadFromCache(category: category, with: self?.resourcesType ?? .movies)
+                    self?.loadFromCache(category: category)
                     
                     print(error)
                 }
@@ -63,7 +63,7 @@ final class ContentModel {
                     }
                     
                 case .failure(let error):
-                    self?.loadFromCache(category: category, with: self?.resourcesType ?? .series)
+                    self?.loadFromCache(category: category)
                     
                     print(error)
                 }
@@ -71,9 +71,49 @@ final class ContentModel {
         }
     }
     
-    private func loadFromCache(category: Category, with resourceType: ResourceType) {
+    func search(_ text: String) {
+        let query = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+        
+        if resourcesType == .movies {
+            client.searchMovies(query: query) { [weak self] result in
+                switch result {
+                case .success(let response):
+                    DispatchQueue.main.async {
+                        self?.list = response.results
+                    }
+                case .failure(let error):
+                    print(error)
+                    self?.searchOnCache(text)
+                }
+            }
+            
+        } else {
+            client.searchSeries(query: query) { [weak self] result in
+                switch result {
+                case .success(let response):
+                    DispatchQueue.main.async {
+                        self?.list = response.results
+                    }
+                case .failure(let error):
+                    print(error)
+                    self?.searchOnCache(text)
+                }
+            }
+        }
+    }
+    
+    // MARK: Private methods
+    
+    private func loadFromCache(category: Category) {
         DispatchQueue.main.async {
-            let cacheResult = Cache.shared.getCollection(of: category, with: resourceType)
+            let cacheResult = Cache.shared.getCollection(of: category, with: self.resourcesType)
+            self.list = cacheResult
+        }
+    }
+    
+    private func searchOnCache(_ text: String) {
+        DispatchQueue.main.async {
+            let cacheResult = Cache.shared.search(text, with: self.resourcesType)
             self.list = cacheResult
         }
     }
