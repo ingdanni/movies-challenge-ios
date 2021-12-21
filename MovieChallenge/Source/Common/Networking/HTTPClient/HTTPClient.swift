@@ -52,6 +52,10 @@ public struct HTTPClientConfiguration {
         self.baseURL = baseURL
         self.apiKey = apiKey
     }
+    
+    static var `default`: HTTPClientConfiguration {
+        HTTPClientConfiguration(baseURL: kBaseUrl, apiKey: kApiKey)
+    }
 }
 
 open class HTTPClient {
@@ -68,29 +72,6 @@ open class HTTPClient {
         apiKey = configuration.apiKey
     }
     
-    /// This method is inteded to use the await/async approach for swift concurrency
-    @available(iOS 15.0.0, *)
-    public func asyncRequest<T: Codable>(resource: Resource,
-                                      body: [String: AnyObject]? = nil,
-                                      headers: [String: AnyObject]? = nil,
-                                      type: T.Type) async throws -> T {
-        
-        let data: T = try await withCheckedThrowingContinuation({ continuation in
-            request(resource: resource, body: body, headers: headers, type: type, completion: { result in
-                switch result {
-                case .success(let data):
-                    continuation.resume(returning: data)
-                    break
-                case .failure(let error):
-                    continuation.resume(throwing: error)
-                    break
-                }
-            })
-        })
-        
-        return data
-    }
-    
     public func request<T: Codable>(resource: Resource,
                                       body: [String: AnyObject]? = nil,
                                       headers: [String: AnyObject]? = nil,
@@ -98,10 +79,6 @@ open class HTTPClient {
                                       completion: @escaping (Result<T, HTTPClientError>) -> Void) {
         
         let url = baseURL + resource.resource.route + "&api_key=\(apiKey)"
-        
-        #if DEBUG
-        print("HTTP request: \(resource.resource.method.rawValue) \(url)")
-        #endif
         
         let requestURL = URL(string: url)
         
@@ -132,10 +109,6 @@ open class HTTPClient {
         let task = urlSession.dataTask(with: request, completionHandler: { data, response, error in
 
             if let response = response as? HTTPURLResponse {
-                
-                #if DEBUG
-                print("HTTP statusCode: \(response.statusCode)")
-                #endif
 
                 if 400..<403 ~= response.statusCode {
                     if let data = data {

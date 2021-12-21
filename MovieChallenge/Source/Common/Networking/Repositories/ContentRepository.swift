@@ -17,25 +17,25 @@ protocol ContentProvider {
 
 class ContentRepository: HTTPClient, ContentProvider {
     func fetchMovies(page: Int, category: Category, completion: @escaping (Result<ContentResponse<Movie>, HTTPClientError>) -> Void) {
-        request(resource: ContentResource.getPage(.movies, category, page),
+        request(resource: ContentResource.getPage(ResourceType.movies.rawValue, category.rawValue, page),
                 type: ContentResponse<Movie>.self,
                 completion: completion)
     }
     
     func fetchSeries(page: Int, category: Category, completion: @escaping (Result<ContentResponse<Serie>, HTTPClientError>) -> Void) {
-        request(resource: ContentResource.getPage(.series, category, page),
+        request(resource: ContentResource.getPage(ResourceType.series.rawValue, category.rawValue, page),
                 type: ContentResponse<Serie>.self,
                 completion: completion)
     }
     
     func searchMovies(query: String, completion: @escaping (Result<ContentResponse<Movie>, HTTPClientError>) -> Void) {
-        request(resource: ContentResource.search(.movies, query),
+        request(resource: ContentResource.search(ResourceType.movies.rawValue, query),
                 type: ContentResponse<Movie>.self,
                 completion: completion)
     }
     
     func searchSeries(query: String ,completion: @escaping (Result<ContentResponse<Serie>, HTTPClientError>) -> Void) {
-        request(resource: ContentResource.search(.series, query),
+        request(resource: ContentResource.search(ResourceType.series.rawValue, query),
                 type: ContentResponse<Serie>.self,
                 completion: completion)
     }

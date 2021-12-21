@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     var title: String
+    var tabs: [Category]
     
     @ObservedObject var presenter: ContentPresenter
     
@@ -33,10 +34,18 @@ struct ContentView: View {
     var categoriesHeader: some View {
         ScrollView(.horizontal, showsIndicators: false, content: {
             HStack {
-                ForEach(Category.allCases, id: \.rawValue) { item in
+                ForEach(tabs, id: \.rawValue) { item in
                     Button(item.title, action: {
                         presenter.selectedCategory = item
                     })
+                    .font(
+                        item == presenter.selectedCategory
+                        ? Font.system(size: 18)
+                        : Font.system(size: 16))
+                    .foregroundColor(
+                        item == presenter.selectedCategory
+                        ? Color.gray
+                        : Color.white)
                 }
             }
             .padding(.horizontal, 16)
@@ -49,7 +58,12 @@ struct ContentView: View {
     var contentList: some View {
         ScrollView {
             LazyVStack {
-                listItems
+                if presenter.list.isEmpty {
+                    ProgressView("Loading...")
+                        .padding(.vertical, 40)
+                } else {
+                    listItems
+                }
             }
         }
     }

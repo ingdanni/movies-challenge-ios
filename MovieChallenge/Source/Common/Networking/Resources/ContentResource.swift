@@ -6,16 +6,16 @@
 //
 
 enum ContentResource: Resource {
-    case getPage(ResourceType, Category, Int)
-    case search(ResourceType, String)
+    case getPage(String, String, Int)
+    case search(String, String)
     
     var resource: (method: HTTPMethod, route: String, contentType: ContentType?) {
         switch self {
         case .getPage(let resourceType, let category, let page):
-            return (.get, "/\(resourceType.rawValue)/\(category.rawValue)?page=\(page)", nil)
+            return (.get, "/\(resourceType)/\(category)?page=\(page)", nil)
             
         case .search(let resourceType, let query):
-            return (.get, "/search/\(resourceType.rawValue)?query=\(query)", nil)
+            return (.get, "/search/\(resourceType)?query=\(query)", nil)
         }
     }
 }
