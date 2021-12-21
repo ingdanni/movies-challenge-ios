@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct MainNavigation: View {
+    
     var body: some View {
         TabView {
             ForEach(ResourceType.allCases, id: \.rawValue) { item in
                 ContentView(
                     title: item.title,
+                    tabs: item.categories,
                     presenter: ContentPresenter(
                         interactor: ContentInteractor(
-                            model: ContentModel(resourcesType: item))
+                            model: ContentModel(resourcesType: item,
+                                                repository: ContentRepository(
+                                                    configuration: HTTPClientConfiguration.default)))
                     )
                 )
                 .tabItem {
@@ -23,6 +27,9 @@ struct MainNavigation: View {
                     Text(item.title)
                 }
             }
+        }
+        .onAppear {
+            UITabBar.appearance().backgroundColor = .black
         }
     }
 }

@@ -24,6 +24,7 @@ class ContentPresenter: ObservableObject {
         self.interactor = interactor
         
         interactor.model.$list
+            .receive(on: DispatchQueue.main)
             .assign(to: \.list, on: self)
             .store(in: &cancellables)
         
@@ -60,7 +61,7 @@ class ContentPresenter: ObservableObject {
             interactor.load(category: selectedCategory, for: currentPage, reset: true)
         }
         
-        if text.count > 3 {
+        if text.count > 2 {
             interactor.search(text)
         }
     }

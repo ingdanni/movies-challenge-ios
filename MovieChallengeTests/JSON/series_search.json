@@ -1,0 +1,391 @@
+{
+	"page": 1,
+	"results": [
+		{
+			"backdrop_path": "/9OYu6oDLIidSOocW3JTGtd2Oyqy.jpg",
+			"first_air_date": "2017-09-25",
+			"genre_ids": [
+				18
+			],
+			"id": 71712,
+			"name": "The Good Doctor",
+			"origin_country": [
+				"US"
+			],
+			"original_language": "en",
+			"original_name": "The Good Doctor",
+			"overview": "Shaun Murphy, a young surgeon with autism and savant syndrome, relocates from a quiet country life to join a prestigious hospital's surgical unit. Unable to personally connect with those around him, Shaun uses his extraordinary medical gifts to save lives and challenge the skepticism of his colleagues.",
+			"popularity": 593.027,
+			"poster_path": "/cXUqtadGsIcZDWUTrfnbDjAy8eN.jpg",
+			"vote_average": 8.6,
+			"vote_count": 9892
+		},
+		{
+			"backdrop_path": "/sRfl6vyzGWutgG0cmXmbChC4iN6.jpg",
+			"first_air_date": "2005-03-26",
+			"genre_ids": [
+				10759,
+				18,
+				10765
+			],
+			"id": 57243,
+			"name": "Doctor Who",
+			"origin_country": [
+				"GB"
+			],
+			"original_language": "en",
+			"original_name": "Doctor Who",
+			"overview": "The Doctor is a Time Lord: a 900 year old alien with 2 hearts, part of a gifted civilization who mastered time travel. The Doctor saves planets for a living—more of a hobby actually, and the Doctor's very, very good at it.",
+			"popularity": 199.576,
+			"poster_path": "/sz4zF5z9zyFh8Z6g5IQPNq91cI7.jpg",
+			"vote_average": 7.3,
+			"vote_count": 2225
+		},
+		{
+			"backdrop_path": "/p62osAAoVW6IwMPlGXxpQnQdBNx.jpg",
+			"first_air_date": "1963-11-23",
+			"genre_ids": [
+				10759,
+				18,
+				10765
+			],
+			"id": 121,
+			"name": "Doctor Who",
+			"origin_country": [
+				"GB"
+			],
+			"original_language": "en",
+			"original_name": "Doctor Who",
+			"overview": "The adventures of a Time Lord—a time-travelling humanoid alien known as the Doctor—who explores the universe in his TARDIS, a sentient time-travelling space ship. Its exterior appears as a blue British police box, which was a common sight in Britain in 1963 when the series first aired. Along with a succession of companions, the Doctor faces a variety of foes while working to save civilisations, help ordinary people, and right wrongs.",
+			"popularity": 81.375,
+			"poster_path": "/xinqAmYrZ1TEwowcQhgTkZVtVE0.jpg",
+			"vote_average": 7.9,
+			"vote_count": 396
+		},
+		{
+			"backdrop_path": "/1RPmoc8eADJMoVQG22KQdouZIrR.jpg",
+			"first_air_date": "2016-09-14",
+			"genre_ids": [
+				18,
+				35
+			],
+			"id": 67728,
+			"name": "Doctor Doctor",
+			"origin_country": [
+				"AU"
+			],
+			"original_language": "en",
+			"original_name": "Doctor Doctor",
+			"overview": "The story of Hugh Knight, a rising heart surgeon who is gifted, charming and infallible. He is a hedonist who, due to his sheer talent, believes he can live outside the rules. His \"work hard, play harder\" philosophy is about to come back and bite him.",
+			"popularity": 18.613,
+			"poster_path": "/cop35HdXqbrPDc9ClyrOmv3sJV2.jpg",
+			"vote_average": 7.4,
+			"vote_count": 21
+		},
+		{
+			"backdrop_path": "/hz3gNDpsoeRnMf5maTXQ7ufQv3L.jpg",
+			"first_air_date": "2015-09-09",
+			"genre_ids": [
+				18
+			],
+			"id": 63913,
+			"name": "Doctor Foster",
+			"origin_country": [
+				"GB"
+			],
+			"original_language": "en",
+			"original_name": "Doctor Foster",
+			"overview": "A woman suspects her husband of having an affair. After following several lines of enquiries far more unravels including a streak of violence below the surface.",
+			"popularity": 12.672,
+			"poster_path": "/gJiaterDM3tZ2yioR24RzJpLhzD.jpg",
+			"vote_average": 7.1,
+			"vote_count": 84
+		},
+		{
+			"backdrop_path": null,
+			"first_air_date": "2002-11-24",
+			"genre_ids": [
+				18
+			],
+			"id": 11203,
+			"name": "Doctor Zhivago",
+			"origin_country": [
+				"GB"
+			],
+			"original_language": "en",
+			"original_name": "Doctor Zhivago",
+			"overview": "Young and beautiful Lara is loved by three men: a revolutionary, a mogul, and a doctor. Their lives become intertwined with the drama of Russian revolution. Doctor Zhivago is still married when he meets Lara. Their love story is unfolding against the backdrop of revolution which affects the doctor's career, his family, and his love to Lara.",
+			"popularity": 12.352,
+			"poster_path": "/44CdAdDS172HeVmgxV26fqBRerd.jpg",
+			"vote_average": 6.5,
+			"vote_count": 41
+		},
+		{
+			"backdrop_path": null,
+			"first_air_date": "1958-12-29",
+			"genre_ids": [],
+			"id": 14995,
+			"name": "Young Doctor Malone",
+			"origin_country": [
+				"US"
+			],
+			"original_language": "en",
+			"original_name": "Young Doctor Malone",
+			"overview": "Young Doctor Malone is an American soap opera, created by Irna Phillips, which had a long run on radio and television from 1939 to 1963. The producer was Betty Corday, who also produced Pepper Young's Family and later was a co-creator with husband Ted Corday of NBC Daytime's Days of our Lives.\n\nSponsored by General Foods and Post Cereals, the radio serial began on the Blue Network on November 20, 1939. The 15-minute program aired daily at 11:15am, continuing until April 26, 1940. Without a break, it moved to CBS on April 29, 1940, where it was heard for two decades, first airing at 2:00pm weekdays and then 1:30pm. In 1945, Procter & Gamble assumed sponsorship of the program.",
+			"popularity": 20.068,
+			"poster_path": null,
+			"vote_average": 1,
+			"vote_count": 1
+		},
+		{
+			"backdrop_path": "/7jgwuiFdDvlKn2KqOohMIulc4Po.jpg",
+			"first_air_date": "2009-02-22",
+			"genre_ids": [
+				35
+			],
+			"id": 34353,
+			"name": "Doctor Mateo",
+			"origin_country": [
+				"ES"
+			],
+			"original_language": "es",
+			"original_name": "Doctor Mateo",
+			"overview": "Doctor Mateo was a Spanish television comedy drama produced by Notro Films for Antena 3. It is an adaptation of the British series Doc Martin, created by Dominic Minghella.",
+			"popularity": 9.239,
+			"poster_path": "/yfGiyFqw3CwHcjOYfGma390RWVL.jpg",
+			"vote_average": 6.5,
+			"vote_count": 2
+		},
+		{
+			"backdrop_path": "/8MMHJZBtNtc2TNfiNLmOrjOuNWv.jpg",
+			"first_air_date": "2005-03-26",
+			"genre_ids": [],
+			"id": 1056,
+			"name": "Doctor Who Confidential",
+			"origin_country": [
+				"GB"
+			],
+			"original_language": "en",
+			"original_name": "Doctor Who Confidential",
+			"overview": "Doctor Who Confidential is a documentary series created by the British Broadcasting Corporation to complement the revival of the long-running British science fiction television series Doctor Who. Each episode was broadcast on BBC Three on Saturdays, immediately after the broadcast of the weekly television episode on BBC One. The running time of the first two series was 30 minutes, being extended to 45 minutes in the third. BBC Three also broadcast a cut-down edition of the programme, lasting 15 minutes, shown after the repeats on Sundays and Fridays and after the weekday evening repeats of earlier seasons.\n\nDescribed as focusing on the human element of the series, Confidential features behind-the-scenes footage on the making of Doctor Who through clips and interviews with the cast, production crew and other people, including those who have participated in the television series over the years of its existence. Each episode deals with a different topic, and in most cases refers to the Doctor Who episode that preceded it.\n\nThere have also been two episodes of Doctor Who Confidential broadcast apart from the showing of Doctor Who episodes: in November 2006 an edition subtitled \"Music and Monsters\" was produced going behind the scenes of a televised concert of soundtrack music produced as part of that year's Children in Need appeal, and on 3 January 2009, a special edition was broadcast to announce the actor chosen to play the Eleventh Doctor.",
+			"popularity": 12.8,
+			"poster_path": "/hJi4pFE7wsQgksGIgnBG7Cqiggz.jpg",
+			"vote_average": 8,
+			"vote_count": 21
+		},
+		{
+			"backdrop_path": "/mYd8w0z0e0w9PeeZPg6JK1u6e7o.jpg",
+			"first_air_date": "2016-03-06",
+			"genre_ids": [
+				18
+			],
+			"id": 65805,
+			"name": "Doctor Thorne",
+			"origin_country": [
+				"GB"
+			],
+			"original_language": "en",
+			"original_name": "Doctor Thorne",
+			"overview": "The story of the penniless Mary Thorne, who grows up with her rich aunt/cousins at Greshamsbury Park estate.",
+			"popularity": 7.458,
+			"poster_path": "/z9ni5ueY1tiKOBPOObH7KxyZKZL.jpg",
+			"vote_average": 0,
+			"vote_count": 0
+		},
+		{
+			"backdrop_path": "/e6UPS2SwCo1c0LOg7mrsqPzKVbn.jpg",
+			"first_air_date": "1998-08-24",
+			"genre_ids": [],
+			"id": 11743,
+			"name": "House Doctor",
+			"origin_country": [
+				"GB"
+			],
+			"original_language": "en",
+			"original_name": "House Doctor",
+			"overview": "House Doctor is a television programme, originally broadcast on Channel 5 in the UK. Each week, the House Doctor - Californian real-estate stylist, Ann Maurice - helps UK home-owners sell their houses with her industry know-how and style tips. The popularity of the show has lent the word \"house doctoring\" to the British English lexicon, which is similar to the American term home staging. This program is now shown in many countries around the globe, which is broadening the use and familiarity of this term.",
+			"popularity": 9.134,
+			"poster_path": "/s1wCiIn3chdYlNLQmMqaFN8aDJa.jpg",
+			"vote_average": 5.7,
+			"vote_count": 3
+		},
+		{
+			"backdrop_path": null,
+			"first_air_date": "1989-06-12",
+			"genre_ids": [
+				35
+			],
+			"id": 2656,
+			"name": "Doctor Doctor",
+			"origin_country": [
+				"US"
+			],
+			"original_language": "en",
+			"original_name": "Doctor Doctor",
+			"overview": "Doctor Doctor is an American television sitcom that aired on CBS. It began a short run in June 1989, and was picked up for a full season the following fall. A second season followed in fall 1990, but the show was cancelled at the end of the 1990-1991 season, due to low ratings. One episode, \"Long Day's Journey Into Deirdre\", remains unaired in the US.",
+			"popularity": 4.257,
+			"poster_path": "/ukg14USMZoW52VLChnuuRaBJd8I.jpg",
+			"vote_average": 9,
+			"vote_count": 2
+		},
+		{
+			"backdrop_path": null,
+			"first_air_date": "2013-02-01",
+			"genre_ids": [
+				18,
+				9648
+			],
+			"id": 59134,
+			"name": "The Doctor Blake Mysteries",
+			"origin_country": [
+				"AU"
+			],
+			"original_language": "en",
+			"original_name": "The Doctor Blake Mysteries",
+			"overview": "Dr Lucien Blake left Ballarat as a young man. But now he finds himself returning to take over not only his dead father's medical practice, but also his on-call role as the town's police surgeon, only to find change is afoot, nothing is sacred, and no one is safe.",
+			"popularity": 11.671,
+			"poster_path": "/nQ9uCfDu12jLxMU3ea618LMvMyX.jpg",
+			"vote_average": 7.7,
+			"vote_count": 26
+		},
+		{
+			"backdrop_path": "/rSGxR1i6h0SC2lhNgFs3T3W4fYA.jpg",
+			"first_air_date": "2012-09-17",
+			"genre_ids": [
+				18,
+				9648
+			],
+			"id": 43105,
+			"name": "The Mob Doctor",
+			"origin_country": [
+				"US"
+			],
+			"original_language": "en",
+			"original_name": "The Mob Doctor",
+			"overview": "For most physicians, the Hippocratic oath is sacred. But for one Chicago  doctor, who is indebted to the mafia, saving lives isn’t her only  concern. The Mob Doctor is a fast-paced medical drama focusing on a  young female surgeon caught between two worlds as she juggles her  promising medical career with her family’s debt to Chicago’s Southside  mob.",
+			"popularity": 7.394,
+			"poster_path": "/1vez2ANWwYeGuBpfewyP8SV6bKb.jpg",
+			"vote_average": 6.4,
+			"vote_count": 23
+		},
+		{
+			"backdrop_path": null,
+			"first_air_date": "1981-06-24",
+			"genre_ids": [
+				16,
+				10751,
+				10762,
+				10765
+			],
+			"id": 3133,
+			"name": "Doctor Snuggles",
+			"origin_country": [
+				"NL",
+				"GB"
+			],
+			"original_language": "en",
+			"original_name": "Doctor Snuggles",
+			"overview": "Doctor Snuggles is an animated television series created by Jeffrey O'Kelly based on original artwork by Nick Price, about a friendly and optimistic inventor named Doctor Snuggles who has unusual adventures with his friends. The show featured fantastical scenarios which usually involved Doctor Snuggles inventing something outlandish such as a robot helper or diamond-making machine, and had a variety of supporting characters who were mostly anthropomorphic animals.",
+			"popularity": 4.549,
+			"poster_path": "/tPPycrOUzvBdwTamPasTllCksfb.jpg",
+			"vote_average": 6.7,
+			"vote_count": 10
+		},
+		{
+			"backdrop_path": "/gthGoLtNcYxlnjFlR8ZCaJm6CQI.jpg",
+			"first_air_date": "2021-10-29",
+			"genre_ids": [
+				35
+			],
+			"id": 123279,
+			"name": "Doctor Portuondo",
+			"origin_country": [
+				"ES"
+			],
+			"original_language": "es",
+			"original_name": "Doctor Portuondo",
+			"overview": "",
+			"popularity": 4.572,
+			"poster_path": "/kpc5JQO1pSRBNfiliQGKHRYfObJ.jpg",
+			"vote_average": 10,
+			"vote_count": 1
+		},
+		{
+			"backdrop_path": "/ezQu7xqkP6GAGCFzIIIlpVL3ca6.jpg",
+			"first_air_date": "1993-05-09",
+			"genre_ids": [
+				18
+			],
+			"id": 7586,
+			"name": "Doctor Finlay",
+			"origin_country": [
+				"GB"
+			],
+			"original_language": "en",
+			"original_name": "Doctor Finlay",
+			"overview": "Following his service in World War II, Doctor Finlay returns to the practice at Arden House. This is at a time when the National Health Service is about to be instituted.",
+			"popularity": 4.33,
+			"poster_path": "/pSYCKFf5asoDR5wrXgNce7AMAsG.jpg",
+			"vote_average": 6,
+			"vote_count": 1
+		},
+		{
+			"backdrop_path": null,
+			"first_air_date": "2009-08-20",
+			"genre_ids": [
+				99
+			],
+			"id": 71638,
+			"name": "Doctor Who Greatest Moments",
+			"origin_country": [
+				"GB"
+			],
+			"original_language": "en",
+			"original_name": "Doctor Who Greatest Moments",
+			"overview": "Takes viewers on a journey through time and space to relive all the action from the sci-fi show, featuring exclusive interviews with key actors offering unique insights on the classic moments.",
+			"popularity": 4.303,
+			"poster_path": "/s3LHdXyBfsZQxNJwcCO7g2PoEg1.jpg",
+			"vote_average": 5.5,
+			"vote_count": 4
+		},
+		{
+			"backdrop_path": null,
+			"first_air_date": "2014-08-23",
+			"genre_ids": [],
+			"id": 61643,
+			"name": "Doctor Who Extra",
+			"origin_country": [
+				"GB"
+			],
+			"original_language": "en",
+			"original_name": "Doctor Who Extra",
+			"overview": "Doctor Who Extra brings you unprecedented access to the making of Doctor Who... Featuring interviews with Peter Capaldi and Jenna Coleman, it's the ultimate backstage pass!",
+			"popularity": 3.256,
+			"poster_path": "/niMvcvZ7mzQYzWURU3hrNVUlnAD.jpg",
+			"vote_average": 0,
+			"vote_count": 0
+		},
+		{
+			"backdrop_path": null,
+			"first_air_date": "2006-04-13",
+			"genre_ids": [
+				10751,
+				10765
+			],
+			"id": 454,
+			"name": "Totally Doctor Who",
+			"origin_country": [
+				"GB"
+			],
+			"original_language": "en",
+			"original_name": "Totally Doctor Who",
+			"overview": "Totally Doctor Who is a children's television series produced by the BBC that was originally broadcast between 13 April 2006 and 29 June 2007, accompanying the second and third revived series of Doctor Who. No episodes have been produced following the third series. At the time of its original broadcast, Doctor Who, a science fiction programme aimed at a family audience, had no existing children's spin-off; The Sarah Jane Adventures, of which the pilot episode was broadcast on New Year's Day, 2007, would replace the series as the only children's show based on Doctor Who until 2009 when K-9 aired.",
+			"popularity": 3.815,
+			"poster_path": "/l9QRZphKBrpEmL8HPg0Y946DMN8.jpg",
+			"vote_average": 8,
+			"vote_count": 1
+		}
+	],
+	"total_pages": 10,
+	"total_results": 190
+}

@@ -29,4 +29,14 @@ extension ResourceType {
             return "diamond"
         }
     }
+    
+    var categories: [Category] {
+        switch self {
+        case .movies:
+            return Category.allCases
+        case .series:
+            // On tv shows there is not upcoming category
+            return [Category.popular, Category.topRated]
+        }
+    }
 }

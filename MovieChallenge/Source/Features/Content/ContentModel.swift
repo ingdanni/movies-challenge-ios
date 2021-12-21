@@ -10,17 +10,14 @@ import RealmSwift
 
 final class ContentModel {
     
-    private let client: ContentProvider
     private let resourcesType: ResourceType
+    private let repository: ContentProvider
     
     @Published var list: [ContentAdapter] = []
     
-    init(resourcesType: ResourceType) {
+    init(resourcesType: ResourceType, repository: ContentProvider) {
         self.resourcesType = resourcesType
-        
-        let configuration = HTTPClientConfiguration(baseURL: kBaseUrl, apiKey: kApiKey)
-
-        client = ContentRepository(configuration: configuration)
+        self.repository = repository
     }
     
     func load(category: Category, for page: Int, reset: Bool = false) {
@@ -30,7 +27,7 @@ final class ContentModel {
         }
         
         if resourcesType == .movies {
-            client.fetchMovies(page: page, category: category, completion: { [weak self] result in
+            repository.fetchMovies(page: page, category: category, completion: { [weak self] result in
                 switch result {
                 case .success(let response):
                     // save movies on cache
@@ -38,9 +35,7 @@ final class ContentModel {
                                                with: self?.resourcesType ?? .movies,
                                                on: category)
                     
-                    DispatchQueue.main.async {
-                        self?.list += response.results
-                    }
+                    self?.list += response.results
                     
                 case .failure(let error):
                     self?.loadFromCache(category: category)
@@ -50,7 +45,7 @@ final class ContentModel {
             })
             
         } else {
-            client.fetchSeries(page: page, category: category, completion: { [weak self] result in
+            repository.fetchSeries(page: page, category: category, completion: { [weak self] result in
                 switch result {
                 case .success(let response):
                     // save series on cache
@@ -58,9 +53,7 @@ final class ContentModel {
                                                with: self?.resourcesType ?? .series,
                                                on: category)
                     
-                    DispatchQueue.main.async {
-                        self?.list += response.results
-                    }
+                    self?.list += response.results
                     
                 case .failure(let error):
                     self?.loadFromCache(category: category)
@@ -75,12 +68,10 @@ final class ContentModel {
         let query = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
         
         if resourcesType == .movies {
-            client.searchMovies(query: query) { [weak self] result in
+            repository.searchMovies(query: query) { [weak self] result in
                 switch result {
                 case .success(let response):
-                    DispatchQueue.main.async {
-                        self?.list = response.results
-                    }
+                    self?.list = response.results
                 case .failure(let error):
                     print(error)
                     self?.searchOnCache(text)
@@ -88,12 +79,10 @@ final class ContentModel {
             }
             
         } else {
-            client.searchSeries(query: query) { [weak self] result in
+            repository.searchSeries(query: query) { [weak self] result in
                 switch result {
                 case .success(let response):
-                    DispatchQueue.main.async {
-                        self?.list = response.results
-                    }
+                    self?.list = response.results
                 case .failure(let error):
                     print(error)
                     self?.searchOnCache(text)
