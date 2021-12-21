@@ -1,6 +1,6 @@
 # Code challenge iOS - Movies app
 
-### Project structure
+## Project structure
 
 * The `Common` folder contains shared code across all features.
 
@@ -54,10 +54,10 @@
 
 ## Preguntas
 
-1. En qué consiste el principio de responsabilidad única? Cuál es su propósito?
+1. **En qué consiste el principio de responsabilidad única? Cuál es su propósito?**
 
 RESPUESTA: Consiste en que cada clase o componente de nuestro código tenga un solo objetivo o función. De esta forma cada componente evita tener dependencias a otras funcionalidades que están fuera de su alcance y el código se hace más comprensible y reutilizable para los desarrolladores.
 
-2. Qué características tiene, según su opinión, un “buen” código o código limpio
+2. **Qué características tiene, según su opinión, un “buen” código o código limpio**
 
 RESPUESTA: Para tener un código limpio se necesita tener una arquitectura bien definida y consensuada entre el equipo de desarrollo, luego el código debe ser testeable y si no lo fuera se debe replantear la solución al problema. También es necesario seguir una guia de estilos para estandarizar el código y documentar siempre que fuera necesario los elementos de nuestro código (clases, funciones, parametros, etc..)

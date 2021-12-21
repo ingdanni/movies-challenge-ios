@@ -10,8 +10,6 @@
 		303CB35C276A75B300715AD3 /* MovieChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303CB35B276A75B300715AD3 /* MovieChallengeApp.swift */; };
 		303CB360276A75B400715AD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 303CB35F276A75B400715AD3 /* Assets.xcassets */; };
 		303CB363276A75B400715AD3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 303CB362276A75B400715AD3 /* Preview Assets.xcassets */; };
-		303CB377276A75B400715AD3 /* MovieChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303CB376276A75B400715AD3 /* MovieChallengeUITests.swift */; };
-		303CB379276A75B400715AD3 /* MovieChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303CB378276A75B400715AD3 /* MovieChallengeUITestsLaunchTests.swift */; };
 		303CB386276A766100715AD3 /* Instructions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 303CB385276A766100715AD3 /* Instructions.pdf */; };
 		303CB38D276A772600715AD3 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303CB38C276A772600715AD3 /* Category.swift */; };
 		303CB38F276A792400715AD3 /* ResourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303CB38E276A792400715AD3 /* ResourceType.swift */; };
@@ -33,6 +31,8 @@
 		304E9243276CE21A009190F3 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E9242276CE21A009190F3 /* ImageLoader.swift */; };
 		304E9245276CE3E0009190F3 /* ContentListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E9244276CE3E0009190F3 /* ContentListItem.swift */; };
 		3078067E27722B250039439C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3078067D27722B250039439C /* README.md */; };
+		30780682277243590039439C /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 30780681277243590039439C /* Quick */; };
+		30780685277243630039439C /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 30780684277243630039439C /* Nimble */; };
 		308E1A91276B81920098B76E /* ContentDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E1A90276B81920098B76E /* ContentDetailRouter.swift */; };
 		308E1A93276B819E0098B76E /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E1A92276B819E0098B76E /* ContentDetailView.swift */; };
 		308E1A95276B81A90098B76E /* ContentDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E1A94276B81A90098B76E /* ContentDetailPresenter.swift */; };
@@ -42,8 +42,6 @@
 		308E1AA2276B9BC30098B76E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 308E1AA1276B9BC30098B76E /* Realm */; };
 		308E1AA4276B9BC30098B76E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 308E1AA3276B9BC30098B76E /* RealmSwift */; };
 		308E1AA6276BB5260098B76E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308E1AA5276BB5260098B76E /* Constants.swift */; };
-		309830F327700CDD008A4E63 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 309830F227700CDD008A4E63 /* Quick */; };
-		309830F627700CF9008A4E63 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 309830F527700CF9008A4E63 /* Nimble */; };
 		309830F927700D80008A4E63 /* movies_popular.json in Resources */ = {isa = PBXBuildFile; fileRef = 309830F827700D80008A4E63 /* movies_popular.json */; };
 		309830FB27700DEB008A4E63 /* series_popular.json in Resources */ = {isa = PBXBuildFile; fileRef = 309830FA27700DEB008A4E63 /* series_popular.json */; };
 		309830FE27700E23008A4E63 /* MockClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309830FD27700E23008A4E63 /* MockClient.swift */; };
@@ -62,13 +60,6 @@
 			remoteGlobalIDString = 303CB357276A75B300715AD3;
 			remoteInfo = MovieChallenge;
 		};
-		303CB373276A75B400715AD3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 303CB350276A75B300715AD3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 303CB357276A75B300715AD3;
-			remoteInfo = MovieChallenge;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -77,9 +68,6 @@
 		303CB35F276A75B400715AD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		303CB362276A75B400715AD3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		303CB368276A75B400715AD3 /* MovieChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		303CB372276A75B400715AD3 /* MovieChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		303CB376276A75B400715AD3 /* MovieChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieChallengeUITests.swift; sourceTree = "<group>"; };
-		303CB378276A75B400715AD3 /* MovieChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		303CB385276A766100715AD3 /* Instructions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Instructions.pdf; sourceTree = "<group>"; };
 		303CB38C276A772600715AD3 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		303CB38E276A792400715AD3 /* ResourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceType.swift; sourceTree = "<group>"; };
@@ -132,15 +120,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				309830F327700CDD008A4E63 /* Quick in Frameworks */,
-				309830F627700CF9008A4E63 /* Nimble in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		303CB36F276A75B400715AD3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				30780682277243590039439C /* Quick in Frameworks */,
+				30780685277243630039439C /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +135,6 @@
 				3078067D27722B250039439C /* README.md */,
 				303CB35A276A75B300715AD3 /* MovieChallenge */,
 				303CB36B276A75B400715AD3 /* MovieChallengeTests */,
-				303CB375276A75B400715AD3 /* MovieChallengeUITests */,
 				303CB359276A75B300715AD3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -164,7 +144,6 @@
 			children = (
 				303CB358276A75B300715AD3 /* MovieChallenge.app */,
 				303CB368276A75B400715AD3 /* MovieChallengeTests.xctest */,
-				303CB372276A75B400715AD3 /* MovieChallengeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -196,15 +175,6 @@
 				309830F727700D3A008A4E63 /* JSON */,
 			);
 			path = MovieChallengeTests;
-			sourceTree = "<group>";
-		};
-		303CB375276A75B400715AD3 /* MovieChallengeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				303CB376276A75B400715AD3 /* MovieChallengeUITests.swift */,
-				303CB378276A75B400715AD3 /* MovieChallengeUITestsLaunchTests.swift */,
-			);
-			path = MovieChallengeUITests;
 			sourceTree = "<group>";
 		};
 		303CB387276A76A900715AD3 /* Common */ = {
@@ -420,30 +390,12 @@
 			);
 			name = MovieChallengeTests;
 			packageProductDependencies = (
-				309830F227700CDD008A4E63 /* Quick */,
-				309830F527700CF9008A4E63 /* Nimble */,
+				30780681277243590039439C /* Quick */,
+				30780684277243630039439C /* Nimble */,
 			);
 			productName = MovieChallengeTests;
 			productReference = 303CB368276A75B400715AD3 /* MovieChallengeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		303CB371276A75B400715AD3 /* MovieChallengeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 303CB382276A75B400715AD3 /* Build configuration list for PBXNativeTarget "MovieChallengeUITests" */;
-			buildPhases = (
-				303CB36E276A75B400715AD3 /* Sources */,
-				303CB36F276A75B400715AD3 /* Frameworks */,
-				303CB370276A75B400715AD3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				303CB374276A75B400715AD3 /* PBXTargetDependency */,
-			);
-			name = MovieChallengeUITests;
-			productName = MovieChallengeUITests;
-			productReference = 303CB372276A75B400715AD3 /* MovieChallengeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -462,10 +414,6 @@
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = 303CB357276A75B300715AD3;
 					};
-					303CB371276A75B400715AD3 = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = 303CB357276A75B300715AD3;
-					};
 				};
 			};
 			buildConfigurationList = 303CB353276A75B300715AD3 /* Build configuration list for PBXProject "MovieChallenge" */;
@@ -479,8 +427,8 @@
 			mainGroup = 303CB34F276A75B300715AD3;
 			packageReferences = (
 				308E1AA0276B9BC30098B76E /* XCRemoteSwiftPackageReference "realm-cocoa" */,
-				309830F127700CDD008A4E63 /* XCRemoteSwiftPackageReference "Quick" */,
-				309830F427700CF9008A4E63 /* XCRemoteSwiftPackageReference "Nimble" */,
+				30780680277243590039439C /* XCRemoteSwiftPackageReference "Quick" */,
+				30780683277243630039439C /* XCRemoteSwiftPackageReference "Nimble" */,
 			);
 			productRefGroup = 303CB359276A75B300715AD3 /* Products */;
 			projectDirPath = "";
@@ -488,7 +436,6 @@
 			targets = (
 				303CB357276A75B300715AD3 /* MovieChallenge */,
 				303CB367276A75B400715AD3 /* MovieChallengeTests */,
-				303CB371276A75B400715AD3 /* MovieChallengeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -513,13 +460,6 @@
 				309830FB27700DEB008A4E63 /* series_popular.json in Resources */,
 				3098310827702C87008A4E63 /* series_search.json in Resources */,
 				309830F927700D80008A4E63 /* movies_popular.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		303CB370276A75B400715AD3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,15 +511,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		303CB36E276A75B400715AD3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				303CB377276A75B400715AD3 /* MovieChallengeUITests.swift in Sources */,
-				303CB379276A75B400715AD3 /* MovieChallengeUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -587,11 +518,6 @@
 			isa = PBXTargetDependency;
 			target = 303CB357276A75B300715AD3 /* MovieChallenge */;
 			targetProxy = 303CB369276A75B400715AD3 /* PBXContainerItemProxy */;
-		};
-		303CB374276A75B400715AD3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 303CB357276A75B300715AD3 /* MovieChallenge */;
-			targetProxy = 303CB373276A75B400715AD3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -820,50 +746,6 @@
 			};
 			name = Release;
 		};
-		303CB383276A75B400715AD3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.MovieChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MovieChallenge;
-			};
-			name = Debug;
-		};
-		303CB384276A75B400715AD3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.MovieChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MovieChallenge;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -894,18 +776,25 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		303CB382276A75B400715AD3 /* Build configuration list for PBXNativeTarget "MovieChallengeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				303CB383276A75B400715AD3 /* Debug */,
-				303CB384276A75B400715AD3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		30780680277243590039439C /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		30780683277243630039439C /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		308E1AA0276B9BC30098B76E /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa.git";
@@ -914,25 +803,19 @@
 				kind = branch;
 			};
 		};
-		309830F127700CDD008A4E63 /* XCRemoteSwiftPackageReference "Quick" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Quick/Quick";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		309830F427700CF9008A4E63 /* XCRemoteSwiftPackageReference "Nimble" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Quick/Nimble";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		30780681277243590039439C /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30780680277243590039439C /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		30780684277243630039439C /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30780683277243630039439C /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
 		308E1AA1276B9BC30098B76E /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 308E1AA0276B9BC30098B76E /* XCRemoteSwiftPackageReference "realm-cocoa" */;
@@ -942,16 +825,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 308E1AA0276B9BC30098B76E /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
-		};
-		309830F227700CDD008A4E63 /* Quick */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 309830F127700CDD008A4E63 /* XCRemoteSwiftPackageReference "Quick" */;
-			productName = Quick;
-		};
-		309830F527700CF9008A4E63 /* Nimble */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 309830F427700CF9008A4E63 /* XCRemoteSwiftPackageReference "Nimble" */;
-			productName = Nimble;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
